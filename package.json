@@ -1,0 +1,19 @@
+{
+  "name": "sam-folio",
+  "version": "1.0.0",
+  "description": "My static portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samakintunde37/sam-folio.git"
+  },
+  "author": "Samuel Akintunde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samakintunde37/sam-folio/issues"
+  },
+  "homepage": "https://github.com/samakintunde37/sam-folio#readme"
+}
