@@ -1,5 +1,5 @@
 body {
-  background-image: url(assets/bg.jpg);
+  background-image: url("gs://samakintunde-portfolio.appspot.com/52).jpg");
   height: 100vh;
   display: flex;
   flex-direction: column;
