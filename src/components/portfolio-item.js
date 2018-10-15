@@ -4,7 +4,12 @@ import styles from './portfolio-item.module.css';
 
 const PortfolioItem = ({ data }) => (
   <div className={styles.item}>
-    <a href={data.fields.url} className={styles.link} target="_blank">
+    <a
+      href={data.fields.url}
+      className={styles.link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <img src={data.fields.image.fields.file.url} alt="placeholder" />
       <div>
         <div>

@@ -13,8 +13,6 @@ class Portfolio extends Component {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  fetchProjects = () => {};
-
   componentDidMount = () => {
     this.client
       .getEntries()
@@ -26,11 +24,10 @@ class Portfolio extends Component {
 
   render() {
     let { projects } = this.state;
-
     return (
       <div>
         <h2 className="section-heading">Portfolio</h2>
-        <div style={{ display: grid }}>
+        <div>
           {projects.map(project => (
             <PortfolioItem data={project} />
           ))}
