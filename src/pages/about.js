@@ -1,10 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 
-const About = props => (
-  <Layout>
-    <h1>The About Page</h1>
-  </Layout>
-);
+const About = props => <Layout>About</Layout>;
 
 export default About;

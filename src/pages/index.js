@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import Portfolio from '../components/portfolio';
@@ -12,6 +12,13 @@ const IndexPage = () => (
     </div>
 
     <Portfolio />
+
+    <div className="contact">
+      <h2 className="section-heading">Got any questions for me?</h2>
+      <Link to="/contact">
+        <button className="button">Contact Me</button>
+      </Link>
+    </div>
 
     <style>
       {`
@@ -29,6 +36,34 @@ const IndexPage = () => (
 
         div.hero p {
           font-weight: 600;
+        }
+
+        .contact {
+          margin: 1em 0;
+          padding: 1em;
+          color: #ffffff;
+          text-align: center;
+        }
+
+        .button {
+          position: relative;
+          border: 1.5px solid #147dff;
+          border-radius: 2px;
+          color: #000000;
+          margin-top: 1em;
+          padding: 0.5em 1em;
+          background: none;
+          transition: 0.2s;
+          font-family: Montserrat, sans-serif;
+          font-size: 0.8em;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+        }
+
+        .button:hover {
+          background-color: #147dff;
+          color: #ffffff;
         }
       `}
     </style>

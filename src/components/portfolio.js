@@ -3,6 +3,8 @@ import * as contentful from 'contentful';
 
 import PortfolioItem from './portfolio-item';
 
+import styles from './portfolio.module.css';
+
 class Portfolio extends Component {
   state = {
     projects: [],
@@ -27,9 +29,9 @@ class Portfolio extends Component {
     return (
       <div>
         <h2 className="section-heading">Portfolio</h2>
-        <div>
+        <div className={styles.grid}>
           {projects.map(project => (
-            <PortfolioItem data={project} />
+            <PortfolioItem data={project} key={project.fields.id} />
           ))}
         </div>
       </div>

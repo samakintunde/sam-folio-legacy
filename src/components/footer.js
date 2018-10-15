@@ -10,9 +10,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './footer.module.css';
 
-// import '../ext/fontawesome.min.css';
-// import '../ext/brands.min.css';
-
 const Footer = props => {
   return (
     <footer className={styles.footer}>
