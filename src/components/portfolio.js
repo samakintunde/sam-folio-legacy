@@ -9,8 +9,8 @@ class Portfolio extends Component {
   };
 
   client = contentful.createClient({
-    space: process.env.SPACE_ID,
-    accessToken: process.env.ACCESS_TOKEN,
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
   fetchProjects = () => {};
@@ -30,9 +30,11 @@ class Portfolio extends Component {
     return (
       <div>
         <h2 className="section-heading">Portfolio</h2>
-        {projects.map(project => (
-          <PortfolioItem data={project} />
-        ))}
+        <div style={{ display: grid }}>
+          {projects.map(project => (
+            <PortfolioItem data={project} />
+          ))}
+        </div>
       </div>
     );
   }
