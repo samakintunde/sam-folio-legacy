@@ -1,46 +1,48 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
 import Layout from '../components/layout';
 import Portfolio from '../components/portfolio';
 
-const IndexPage = () => (
-  <Layout>
-    <Helmet
-      title="Samakintunde"
-      meta={[
-        { name: 'description', content: 'Designer and developer' },
-        {
-          name: 'keywords',
-          content: 'web development, design, code, javascript, react, ui',
-        },
-        { name: 'twitter:site', content: '@samakintunde37' },
-        { name: 'twitter:title', content: 'Samakintunde' },
-        { name: 'twitter:description', content: 'Designer and developer' },
-        { name: 'twitter:creator', content: '@samakintunde37' },
-        { name: 'og:site_name', content: 'Samakintunde' },
-        { name: 'og:title', content: 'Samakintunde' },
-        { name: 'og:description', content: 'Designer and developer' },
-        { name: 'og:url', content: `http://samakintunde.design` },
-      ]}
-    />
-    <div className="hero">
-      <h1>Hi, I'm Samuel Akintunde</h1>
-      <p>A designer and developer.</p>
-    </div>
+const IndexPage = ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <Helmet
+        title="Samakintunde"
+        meta={[
+          { name: 'description', content: 'Designer and developer' },
+          {
+            name: 'keywords',
+            content: 'web development, design, code, javascript, react, ui',
+          },
+          { name: 'twitter:site', content: '@samakintunde37' },
+          { name: 'twitter:title', content: 'Samakintunde' },
+          { name: 'twitter:description', content: 'Designer and developer' },
+          { name: 'twitter:creator', content: '@samakintunde37' },
+          { name: 'og:site_name', content: 'Samakintunde' },
+          { name: 'og:title', content: 'Samakintunde' },
+          { name: 'og:description', content: 'Designer and developer' },
+          { name: 'og:url', content: `http://samakintunde.design` },
+        ]}
+      />
+      <div className="hero">
+        <h1>Hi, I'm Samuel Akintunde</h1>
+        <p>A designer and developer.</p>
+      </div>
 
-    <Portfolio />
+      <Portfolio data={data.allContentfulPortfolioItem.edges} />
 
-    <div className="contact">
-      <h2 className="section-heading">Got any questions for me?</h2>
-      <Link to="/contact">
-        <button className="button">Contact Me</button>
-      </Link>
-    </div>
+      <div className="contact">
+        <h2 className="section-heading">Got any questions for me?</h2>
+        <Link to="/contact">
+          <button className="button">Contact Me</button>
+        </Link>
+      </div>
 
-    <style>
-      {`
+      <style>
+        {`
         div.hero {
           height: calc(100vh - 6em);
           display: flex;
@@ -85,8 +87,30 @@ const IndexPage = () => (
           color: #ffffff;
         }
       `}
-    </style>
-  </Layout>
-);
+      </style>
+    </Layout>
+  );
+};
 
 export default IndexPage;
+
+export const query = graphql`
+  query Query {
+    allContentfulPortfolioItem(sort: { fields: createdAt, order: DESC }) {
+      edges {
+        node {
+          id
+          title
+          url
+          image {
+            title
+            file {
+              url
+            }
+          }
+          tags
+        }
+      }
+    }
+  }
+`;
