@@ -1,8 +1,15 @@
-require('dotenv').config();
+const environment = process.env.NODE_ENV || 'development';
+
+if (environment === 'development') {
+  require('dotenv').config({
+    path: `.env.${environment}`,
+  });
+}
 
 module.exports = {
   siteMetadata: {
     title: 'Sam Folio',
+    siteUrl: 'https://samakintunde.design',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
