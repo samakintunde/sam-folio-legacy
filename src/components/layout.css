@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Karla';
+  src: url('https://fonts.googleapis.com/css?family=Karla');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.googleapis.com/css?family=Montserrat');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -625,7 +639,7 @@ pre tt:after {
 
 /* PERSONAL GLOBAL STYLES */
 body {
-  font-family: karla, san-serif;
+  font-family: Karla, sans-serif;
 }
 
 h1,
@@ -634,7 +648,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Montserrat, roboto, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 h2.section-heading {

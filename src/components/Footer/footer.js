@@ -8,6 +8,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import netlifyLogo from '../../images/netlify.svg';
+import contentfulLogo from '../../images/contentful.svg';
 import styles from './footer.module.css';
 
 const Footer = props => {
@@ -50,6 +52,28 @@ const Footer = props => {
 
       <div className={styles.rights}>
         <p>&copy;2018 SAMAKINTUNDE</p>
+      </div>
+      <div className={styles.attribution}>
+        <a
+          className={styles.linkMargin}
+          href="https://www.contentful.com/"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            className={styles.image}
+            src={contentfulLogo}
+            alt="Powered by Contentful"
+          />
+        </a>
+        <a
+          className={styles.linkMargin}
+          href="https://www.netlify.com/"
+          rel="nofollow noopener noreferrer"
+          target="_blank"
+        >
+          <img src={netlifyLogo} alt="Hosted on Netlify" />
+        </a>
       </div>
     </footer>
   );

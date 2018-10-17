@@ -1,0 +1,27 @@
+.hidden {
+  display: none;
+}
+
+.form {
+  padding: 2em;
+  background-color: #f8f8f8;
+  box-shadow: 1px 1px 5px 5px #dddddddd;
+}
+
+.form:hover {
+  box-shadow: 1px 1px 3px 3px #dddddddd;
+}
+
+.fieldSection {
+  margin: 1em 0;
+}
+
+.messageArea {
+  display: block;
+  width: 100%;
+  resize: none;
+}
+
+.send {
+  text-align: center;
+}

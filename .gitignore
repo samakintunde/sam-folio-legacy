@@ -3,6 +3,8 @@
 node_modules
 yarn-error.log
 .env.development
+.bitmap
+bit.json
 
 # Build directory
 /public
