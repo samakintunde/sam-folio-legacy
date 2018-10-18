@@ -23,5 +23,24 @@
 }
 
 .send {
-  text-align: center;
+  width: 100%;
+  position: relative;
+  border: 1.5px solid #147dff;
+  border-radius: 3px;
+  color: #000000;
+  margin: 1em auto 0 auto;
+  padding: 0.5em 1em;
+  background: none;
+  transition: 0.2s;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  /* text-align: center; */
+}
+
+.send:hover {
+  background-color: #147dff;
+  color: #ffffff;
 }

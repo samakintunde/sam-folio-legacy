@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <Helmet
-        title="Samakintunde"
+        title="Samakintunde | Designer and Developer"
         meta={[
           { name: 'description', content: 'Designer and developer' },
           {
@@ -27,6 +27,7 @@ const IndexPage = ({ data }) => {
           { name: 'og:url', content: `http://samakintunde.design` },
         ]}
       />
+      <html lang="en" />
       <div className="hero">
         <h1>Hi, I'm Samuel Akintunde</h1>
         <p>A designer and developer.</p>
@@ -58,7 +59,7 @@ const IndexPage = ({ data }) => {
         }
 
         .contact {
-          margin: 1em 0;
+          margin: 5em 0;
           padding: 1em;
           color: #ffffff;
           text-align: center;
@@ -71,8 +72,8 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 
-export const query = graphql`
-  query Query {
+export const indexQuery = graphql`
+  query {
     allContentfulPortfolioItem(sort: { fields: createdAt, order: DESC }) {
       edges {
         node {

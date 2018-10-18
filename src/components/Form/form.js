@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Button from '../Button/button';
 import Input from '../Input/input';
 
 import styles from './form.module.css';
@@ -54,7 +53,9 @@ const Form = () => (
         required
       />
     </div>
-    <Button type="submit" location="success" text="Send" />
+    <button className={styles.send} type="submit">
+      Send
+    </button>
   </form>
 );
 

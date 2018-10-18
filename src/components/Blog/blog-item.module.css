@@ -1,0 +1,39 @@
+.item {
+  box-shadow: 1px 1px 5px 5px #dddddddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item:hover {
+  box-shadow: 1px 1px 3px 3px #dddddddd;
+}
+
+.details {
+  background-color: #f8f8f8;
+  padding: 0.5em 0.5em;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  color: #333333;
+  margin: 1em 0;
+}
+
+.tag {
+  display: inline;
+  max-width: max-content;
+  margin: 0 0.25em;
+  background-color: #147dff;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+}
+
+.excerpt {
+  color: #555555;
+  font-size: 0.8em;
+}
