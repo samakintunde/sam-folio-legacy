@@ -50,7 +50,7 @@ export const storiesQuery = graphql`
           description {
             description
           }
-          publishDate
+          publishDate(formatString: "MMM DD YYYY")
           body {
             body
           }

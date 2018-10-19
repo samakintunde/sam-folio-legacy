@@ -1,27 +1,24 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-// import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
-import Button from '../components/Button/button';
 
-import IconHtml5 from 'react-devicon/html5/original-wordmark';
-import IconCss3 from 'react-devicon/css3/original-wordmark';
-import IconBootstrap from 'react-devicon/bootstrap/plain-wordmark';
-import IconSass from 'react-devicon/sass/original';
-import IconJavascript from 'react-devicon/javascript/original';
-import IconJquery from 'react-devicon/jquery/original-wordmark';
-import IconReact from 'react-devicon/react/original-wordmark';
-import IconNodejs from 'react-devicon/nodejs/original';
-import IconExpress from 'react-devicon/express/original';
-import IconMongodb from 'react-devicon/mongodb/original-wordmark';
-import IconWordpress from 'react-devicon/wordpress/original';
-import IconGit from 'react-devicon/git/original-wordmark';
-import IconHeroku from 'react-devicon/heroku/plain-wordmark';
-import IconPhotoshop from 'react-devicon/photoshop/plain';
-import IconIllustrator from 'react-devicon/illustrator/plain';
-import IconElectron from 'react-devicon/electron/original';
+import Html5 from '../images/html5.svg';
+import Css3 from '../images/css3.svg';
+import Bootstrap from '../images/bootstrap.svg';
+import Sass from '../images/sass.svg';
+import Javascript from '../images/javascript.svg';
+import Jquery from '../images/jquery.svg';
+import ReactIcon from '../images/react.svg';
+import Nodejs from '../images/nodejs.svg';
+import Express from '../images/express.svg';
+import Mongodb from '../images/mongodb.svg';
+import Git from '../images/git.svg';
+import Heroku from '../images/heroku.svg';
+import Wordpress from '../images/wordpress.svg';
+import Photoshop from '../images/photoshop.svg';
+import Illustrator from '../images/illustrator.svg';
 
 const About = ({ data }) => {
   let profile = data.contentfulPerson;
@@ -38,29 +35,28 @@ const About = ({ data }) => {
           <section className="skills-container">
             <h2 className="section-heading">What are my superpowers?</h2>
             <div className="skills">
-              {/* <IconHtml5 width="4em" />
-              <IconCss3 width="4em" />
-              <IconBootstrap width="4em" />
-              <IconSass width="4em" />
-              <IconJavascript width="4em" />
-              <IconJquery width="4em" />
-              <IconReact width="4em" />
-              <IconNodejs width="4em" />
-              <IconExpress width="4em" />
-              <IconMongodb width="4em" />
-              <IconWordpress width="4em" />
-              <IconGit width="4em" />
-              <IconHeroku width="4em" />
-              <IconElectron width="4em" />
-              <IconPhotoshop width="4em" />
-              <IconIllustrator width="4em" /> */}
+              <img src={Html5} alt="HTML5" />
+              <img src={Css3} alt="CSS3" />
+              <img src={Bootstrap} alt="Bootstrap" />
+              <img src={Sass} alt="Sass" />
+              <img src={Javascript} alt="Javascript" />
+              <img src={Jquery} alt="Jquery" />
+              <img src={ReactIcon} alt="React" />
+              <img src={Nodejs} alt="NodeJS" />
+              <img src={Express} alt="Express" />
+              <img src={Mongodb} alt="MongoDB" />
+              <img src={Git} alt="Git" />
+              <img src={Heroku} alt="Heroku" />
+              <img src={Wordpress} alt="Wordpress" />
+              <img src={Photoshop} alt="Photoshop" />
+              <img src={Illustrator} alt="Illustator" />
             </div>
           </section>
 
           <section className="cv">
             <h2 className="section-heading">Resume</h2>
-            <a href="../assets/Resume-1018.pdf" download="">
-              <Button text="download" />
+            <a className="download" href={profile.resume.file.url} download>
+              Button
             </a>
           </section>
 
@@ -133,11 +129,37 @@ const About = ({ data }) => {
           text-align: left;
         }
 
-        section.skills-container div.skills {
+        div.skills {
           margin-top: 0.5em;
           display: grid;
           grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
-          grid-gap: 1em;
+          grid-gap: 2em;
+        }
+
+        div.skills img {
+          width: 4em;
+        }
+
+        a.download {
+          position: relative;
+          border: 1.5px solid #147dff;
+          border-radius: 3px;
+          color: #000000;
+          margin-top: 1em;
+          padding: 0.5em 1em;
+          background: none;
+          transition: 0.2s;
+          font-family: Montserrat, sans-serif;
+          font-size: 0.8em;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          cursor: pointer;
+          text-decoration: none;
+        }
+
+        a.download:hover {
+          background-color: #147dff;
+          color: #ffffff;
         }
 
         section.connect a,
@@ -179,6 +201,11 @@ export const aboutQuery = graphql`
       instagram
       shortBio {
         shortBio
+      }
+      resume {
+        file {
+          url
+        }
       }
     }
   }

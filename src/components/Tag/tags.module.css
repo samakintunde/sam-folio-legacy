@@ -1,0 +1,10 @@
+.tag {
+  display: inline;
+  max-width: max-content;
+  margin: 0 0.25em;
+  background-color: #147dff;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+}

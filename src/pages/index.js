@@ -59,7 +59,7 @@ const IndexPage = ({ data }) => {
         }
 
         .contact {
-          margin: 5em 0;
+          margin-top: 5em;
           padding: 1em;
           color: #ffffff;
           text-align: center;

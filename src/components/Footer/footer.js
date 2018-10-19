@@ -55,7 +55,7 @@ const Footer = props => {
       </div>
 
       <div className={styles.rights}>
-        <p>&copy;2018 SAMAKINTUNDE</p>
+        <p>&copy;2018 SAMAKINTUNDE. All Rights Reserved.</p>
       </div>
       <div className={styles.attribution}>
         <a
