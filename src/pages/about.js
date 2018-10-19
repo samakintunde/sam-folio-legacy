@@ -56,7 +56,7 @@ const About = ({ data }) => {
           <section className="cv">
             <h2 className="section-heading">Resume</h2>
             <a className="download" href={profile.resume.file.url} download>
-              Button
+              Download
             </a>
           </section>
 
