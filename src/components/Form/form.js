@@ -21,11 +21,11 @@ const Form = () => (
     <div className={styles.fieldSection}>
       <label htmlFor="First name">Name</label>
       <div>
-        <Input
+        <input
           type="text"
           name="First name"
           placeholder="First name"
-          required="true"
+          required
         />
         <Input
           type="text"
