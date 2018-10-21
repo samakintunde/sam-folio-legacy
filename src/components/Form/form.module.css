@@ -3,6 +3,7 @@
 }
 
 .form {
+  display: block;
   padding: 2em;
   background-color: #f8f8f8;
   box-shadow: 1px 1px 5px 5px #dddddddd;
@@ -14,6 +15,13 @@
 
 .fieldSection {
   margin: 1em 0;
+}
+
+.input {
+  padding: 0.25em 0.5em;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  width: 100%;
 }
 
 .messageArea {

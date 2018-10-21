@@ -5,24 +5,24 @@ import { Link } from 'gatsby';
 import sentIcon from '../images/sent.svg';
 
 const Success = () => (
-  <main>
-    <Helmet>
-      <title>Message sent</title>
-    </Helmet>
-    <div>
+  <>
+    <Helmet title="Message sent!" />
+    <main>
       <div>
-        <img src={sentIcon} alt="Message sent" />
-        <p>Success!</p>
+        <div>
+          <img src={sentIcon} alt="Message sent" />
+          <p>Success!</p>
+        </div>
+        <div className="links">
+          <Link className="link" to="/">
+            Go Home
+          </Link>
+          <Link className="link" to="/stories">
+            Read some stories
+          </Link>
+        </div>
       </div>
-      <div className="links">
-        <Link className="link" to="/">
-          Go Home
-        </Link>
-        <Link className="link" to="/stories">
-          Read some stories
-        </Link>
-      </div>
-    </div>
+    </main>
 
     <style>
       {`
@@ -70,7 +70,7 @@ const Success = () => (
       }
       `}
     </style>
-  </main>
+  </>
 );
 
 export default Success;
