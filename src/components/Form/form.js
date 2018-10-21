@@ -9,7 +9,7 @@ const Form = () => (
     className={styles.form}
     name="contact"
     method="POST"
-    action="/success"
+    action="./success"
     netlify-honeypot="bot-field"
     netlify
   >
@@ -25,13 +25,13 @@ const Form = () => (
           type="text"
           name="First name"
           placeholder="First name"
-          required="required"
+          required="true"
         />
         <Input
           type="text"
           name="Last name"
           placeholder="Last name"
-          required="required"
+          required="true"
         />
       </div>
     </div>
@@ -41,7 +41,7 @@ const Form = () => (
         type="email"
         name="email"
         placeholder="user@domain.com"
-        required="required"
+        required="true"
       />
     </div>
     <div className={styles.fieldSection}>
