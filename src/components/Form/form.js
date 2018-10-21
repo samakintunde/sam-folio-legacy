@@ -9,7 +9,7 @@ const Form = () => (
     className={styles.form}
     name="contact"
     method="POST"
-    action="./success"
+    action="/success"
     netlify-honeypot="bot-field"
     netlify
   >

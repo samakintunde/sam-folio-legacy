@@ -35,25 +35,14 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /assets/,
-        },
-      },
-    },
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-126222849-2",
+        trackingId: 'UA-126222849-2',
         head: true,
         anonymize: true,
         respectDNT: true,
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        // Any additional create only fields (optional)
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
       },
     },
   ],

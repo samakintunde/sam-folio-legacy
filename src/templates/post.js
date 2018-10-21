@@ -19,8 +19,10 @@ const Post = ({ data }) => {
         <Tags tags={post.tags} />
       </div>
       <Img fluid={post.heroImage.fluid} />
-      <Img fixed={post.author.image.fixed} />
-      {post.body.body}
+      <div
+        className={styles.content}
+        dangerouslySetInnerHTML={{ __html: post.body.childMarkdownRemark.html }}
+      />
     </Layout>
   );
 };
@@ -47,7 +49,9 @@ export const query = graphql`
         }
       }
       body {
-        body
+        childMarkdownRemark {
+          html
+        }
       }
       slug
     }
