@@ -11,7 +11,7 @@ const Form = () => (
     method="POST"
     action="/success"
     netlify-honeypot="bot-field"
-    netlify
+    data-netlify="true"
   >
     <div className={styles.hidden}>
       <label>
