@@ -662,5 +662,10 @@ h2.section-heading {
 .banner div {
   padding: 16px 24px;
   background-color: #147dff;
+  color: #ffffff;
+  text-align: center;
   width: 100%;
+}
+.banner div * {
+  margin-bottom: 0;
 }

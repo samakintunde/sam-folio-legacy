@@ -7,12 +7,12 @@ import './layout.css';
 
 const Layout = ({ children }) => (
   <>
-    <Header siteTitle="Samakintunde" />
     <a href="https://www.samakintunde.com" className="banner">
       <div>
         <h4>Click here to visit new site</h4>
       </div>
     </a>
+    <Header siteTitle="Samakintunde" />
     <div
       style={{
         margin: '0 auto',
