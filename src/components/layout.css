@@ -655,3 +655,12 @@ h2.section-heading {
   color: #333333;
   text-align: center;
 }
+
+.banner {
+  width: 100%;
+}
+.banner div {
+  padding: 16px 24px;
+  background-color: #147dff;
+  width: 100%;
+}
